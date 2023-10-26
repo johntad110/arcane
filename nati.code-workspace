@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../nati"
+		},
+		{
+			"path": "../../Videos/html_css/4. Moshify-Code-@Mosh4Learning/Moshify/code/Moshify/js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nati"
+	}
+}

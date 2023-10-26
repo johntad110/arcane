@@ -172,7 +172,8 @@ a {
 
 .container {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    background-color: #687eff;
  }
 
  .hero__image {
@@ -189,6 +190,7 @@ a {
     margin-top: 6rem;
     font-weight: 600;
     margin-bottom: 0;
+    color: #262626;
    
 }
 
@@ -197,14 +199,15 @@ a {
     text-align: center;
     margin: 2rem 0 0rem;
     font-size: 3rem;
-    color: #b9c3cf;
+    color: #262626;
     letter-spacing: 1px;
+    font-style: italic;
 }
 
 .hero__content {
     margin-top: 1rem;
     font-size: 2rem;
-    color: #b9c3cf;
+    color: #262626;
     letter-spacing: 1px;
     margin-bottom: 0;
     text-align: center;
@@ -222,5 +225,28 @@ a {
     .grid--2x1 {
         grid-template-columns: repeat(2 , 1fr);
         
+    }
+}
+
+/* about-us */
+
+.about {
+    background-image: url(images/bulb.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+}
+
+.about p {
+    margin: 0 5rem 0 5rem;
+    
+}
+
+@media screen and (min-width : 768px) {
+    .about p {
+        margin: 0 15rem 0 15rem;
     }
 }
