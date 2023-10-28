@@ -1,0 +1,78 @@
+.card-image {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+   border-radius: 2rem;
+   
+}
+
+.card-2 {
+    background-image: url(images/candle-cut.jpg);
+   
+}
+.card-3 {
+    background-image: url(images/leath.jpg);
+}
+.card-4 {
+    background-image: url(images/coffee-cut.jpg);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+ .container {
+    width: 320px;
+    height: 500px;
+    perspective: 800px;
+ }
+
+ .container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+ }
+
+
+ .card {
+    height: 100%; 
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms ;
+    transform-style: preserve-3d;
+ }
+
+
+
+ .front , .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+
+ }
+
+.back {
+    background-color: #e3e3e3;
+    transform: rotateY(180deg) rotateZ(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
