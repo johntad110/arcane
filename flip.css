@@ -25,21 +25,6 @@
     padding: 10px;
 }
 
-
-html {
-    font-size: 62.5%;
-}
-
- * {
-
-    box-sizing: border-box;
- }
- body {
-   
- }
-
-
-
  .card-image {
     max-width: 100%;
     vertical-align: middle;
@@ -114,6 +99,9 @@ html {
  @media screen and (max-width : 450px) {
     .flip-main .flip-card {
     flex: 0 0 calc(100% - 0);
+    }
+    .flip-main .flip-card-front .card-title , p {
+        margin: 10px;
     }
 }
  
