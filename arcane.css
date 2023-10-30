@@ -4,7 +4,7 @@ html {
 
 body{
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: .1px;
     font-family: 'Times New Roman', Times, serif;
     color: #262626;
@@ -20,7 +20,7 @@ section {
 
 
 h1,h2,h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 h1 {
@@ -94,6 +94,7 @@ a {
 
 .nav__name{
     color: #fff;
+    margin: 0;
 }
 
 .nav__img {
@@ -106,7 +107,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .nav-link {
@@ -176,13 +177,32 @@ a {
 .container {
     text-align: center;
     margin-bottom: 1rem;
-    background-color: #687EFF;
  }
+
+ .container-head {
+    position: relative;
+  }
+  
+  .container-head::before {
+    content: "";
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6; /* Adjust the opacity value to make the image more or less transparent */
+    z-index: -1;
+  }
+
 
  .hero__image {
     width: 100%;
     margin-top: 0;
     padding-top: 0;
+    opacity: 0.9;
 }
 
 .grid {
@@ -240,7 +260,7 @@ a {
     display: flow-root;
   }
   
-  .container__about::before {
+  .container__about::before  {
     content: "";
     background-image: url('images/bulb.jpg');
     background-size: cover;
@@ -258,13 +278,13 @@ a {
   }
 
 .about p {
-    margin: 0 5rem 0 5rem;
+    margin: 0 10rem 0 10rem;
     opacity: 1;
     color: rgb(10, 4, 4);
 }
 
 .about__heading {
-    padding: 2rem ;
+    padding: 2rem 0 ;
 }
 
 @media screen and (max-width : 768px) {
@@ -448,4 +468,158 @@ span {
 }
  
 
+/* co-founders*/
 
+.main {
+    border: 2px solid #fff;
+    border-radius : 5px;
+    box-shadow: 0 0 10px 0px #00000042;
+    margin: 0 30px 0 30px ;
+}
+
+.picture {
+    width: 15rem;
+    height: 17rem;
+ }
+ 
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ 
+ .card {
+    margin: 2rem;
+    border: 2px solid #fff;
+    border-radius : 5px;
+    box-shadow: 0 0  10px 0px #00000042;
+    cursor: pointer;
+    transition: 400ms;
+    
+ }
+ 
+ .card:hover {
+    filter: grayscale(1);
+    transform: scale(1.03);
+ }
+ 
+ 
+ .flip-main .front {
+    text-align: center;
+ }
+ 
+ 
+ .front .co-name {
+    font-size: 2rem;
+    margin: 5px 0;
+ }
+ .front .co-position {
+    font-size: 1.3rem;
+    line-height: 1;
+    margin-bottom: 2px;
+ }
+ 
+ .back p {
+    font-size: 1.2rem;
+    color: #000;
+ }
+ 
+ @media screen and (max-width : 768px) {
+    .flip-main .card {
+       flex: 0 0 calc(33.33% - 0);
+       margin: 0 10px 10px;
+       perspective: 1000px;
+       
+       
+    }
+ 
+    .flip-main .inner {
+       box-shadow: 0 0 10px #a9b3d6;
+       width: 15rem;
+       margin: 25px;
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       transform-style: preserve-3d;
+       transition: all 1s ease;       
+    }
+ 
+    .flip-main .back {
+       background-color: #e9e9e9;
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       display: flex; 
+       align-items: center;
+       justify-content: center;
+       transform: rotateY(180deg);
+       backface-visibility: hidden;
+       
+       
+       
+    }
+ 
+    .flip-main .card:hover .inner {
+       transform: rotateY(180deg) ;
+    }
+ 
+    .picture {
+       width: 15rem;
+       height: 15rem;
+    }
+    .inner:hover {
+       filter: brightness(1.8rem);
+       transform: scale(1.03);
+    }
+ 
+    .front .co-name {
+       font-size: 1.8rem;
+       font-weight: bold;
+       line-height: 1;
+    }
+    .front .co-position {
+       font-size: 1.2rem;
+    }
+    .back p {
+        text-align: left;
+        font-size: 1rem;
+    }
+ }
+ 
+ 
+
+/*partners*/
+
+.main-partners {
+    height: 100vh;
+}
+
+
+/*thank you*/
+
+.last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+
+.tu {
+    flex-grow: 1;
+   
+}
+
+
+.contact {
+    text-align: right;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+    color: #000;
+}
+ .l-page{
+    margin: 0 30px 0 30px ;
+ }
